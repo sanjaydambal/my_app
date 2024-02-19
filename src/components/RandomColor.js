@@ -19,10 +19,11 @@ hexColor += hex[Math.floor(Math.random()*hex.length)]
     }
   return (
     <div style={{backgroundColor: color, width: '100vw', height: '100vh'}}>
-      <button onClick={()=> handleTypeOfHexColor()}>Create Hex Color</button>
+      <button  onClick={()=> handleTypeOfHexColor()}>Create Hex Color</button>
       <button onClick = {()=>handleTypeOfRgbColor()}>Create RGB Color</button>
       <button onClick={ typeOfColor === 'hex' ? handleTypeOfHexColor : handleTypeOfRgbColor}>Create Random Color</button>
-      <div style={{color: 'white', fontSize: '50px',display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <div style={{color: 'white', fontSize: '50px',display: 'flex', justifyContent: 'center', alignItems: 'center',
+      flexDirection: 'column',gap: '10px'}}>
         <h3>{typeOfColor === 'rgb' ? "RGB Color : " : "Hex Color : " }</h3>
         <h1>{color}</h1>
 
